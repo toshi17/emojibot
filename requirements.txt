@@ -1,0 +1,16 @@
+autopep8==1.4
+beautifulsoup4==4.6.3
+bs4==0.0.1
+certifi==2018.8.24
+chardet==3.0.4
+--extra-index-url https://repo.fury.io/emoji-gen/
+emojilib==1.0.0
+idna==2.7
+lxml==4.2.5
+pycodestyle==2.4.0
+requests==2.19.1
+six==1.11.0
+slackbot==0.5.3
+slacker==0.9.65
+urllib3==1.23
+websocket-client==0.44.0
