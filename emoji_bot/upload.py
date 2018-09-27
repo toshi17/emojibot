@@ -1,4 +1,4 @@
-
+# Thanks https://github.com/smashwilson/slack-emojinator
 
 import os
 import re

@@ -49,7 +49,7 @@ def add(message, text, emoji_name, option=None):
             "       - `-f, --font <font>` -- フォントの設定\n" +\
             "       ※ 色はRGB値か文字列で指定可能。RGB値で指定する場合は6桁か3桁の16進数で記述してください。\n" +\
             "       ※ emoji_nameは英数字、ハイフン、アンダーバーで指定してください。\n" +\
-            "       ※ 例：@"+bot_name+" add プロ pro -c=000 -bc=FFFFFF\n"
+            "       ※ 例：@"+bot_name+" add プロ pro -c 000 -b FFFFFF\n"
         message.reply(error_message)
     except UploadError as e:
         error_message=" :no_entry: アップロードエラー  :no_entry: \n\n"+\
@@ -67,13 +67,15 @@ def add(message, text, emoji_name, option=None):
 
 @respond_to('colors', re.IGNORECASE)
 def color(message):
+    print('got command colors')
     color_message = "\n  _Colors:_  \n"
     for color_name, color_code in colors.items():
         color_message += '   {}: {},'.format(color_name, '#'+color_code)
     message.reply(color_message)
 
 @respond_to('fonts', re.IGNORECASE)
-def color(message):
+def font(message):
+    print('got command fonts')
     font_message = "\n  _Fonts:_  \n"
     for font_name, font_path in fonts.items():
         font_message += '   {},'.format(font_name)
@@ -81,7 +83,7 @@ def color(message):
 
 def add_to_slack(message, text, emoji_name, style):
     try:
-        print('got command upload')
+        print('got command add')
         print(text, emoji_name)
 
         print('- uploading {}'.format(text))
