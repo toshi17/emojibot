@@ -1,6 +1,10 @@
 # Slack emojibot
 これはテキストから自動的に絵文字を作成する絵文字ぼっとです。
 
+# 動作イメージ
+こんな感じで動きます。
+![動作イメージ](images/slack_emojibot.png)
+
 # セットアップ
 
 ```
@@ -34,5 +38,4 @@ docker build -t <img_name>
 docker run -it --rm <img_name>
 ```
 で動きます。
-
 
