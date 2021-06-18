@@ -12,5 +12,5 @@ requests==2.21.0
 six==1.11.0
 slackbot==0.5.3
 slacker==0.9.65
-urllib3==1.23
+urllib3==1.26.5
 websocket-client==0.44.0
